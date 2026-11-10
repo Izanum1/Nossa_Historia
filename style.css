@@ -1,0 +1,231 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#contador {
+    font-size: 1.5rem;          
+  font-weight: bold;          
+  color: #ff6b00;             
+  margin-top: 30px;           
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#totais {
+    font-size: 1.5rem;          
+  font-weight: bold;          
+  color: #ff6b00;             
+  margin-top: 30px;           
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#lua {
+    font-size: 1.5rem;          
+  font-weight: bold;          
+  color: #ff6b00;             
+  margin-top: 30px;           
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#estacao {
+    font-size: 1.5rem;          
+  font-weight: bold;          
+  color: #ff6b00;             
+  margin-top: 30px;           
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.g1{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.g2{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.g1 img, .g2 img {
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 65%;
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+}
+
+.container-temas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* Espaçamento entre os temas */
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.txt{
+    flex: 1 1 180px;
+    max-width: 280px;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #ff6b00;
+    text-align: justify;
+    flex-basis: 150px;
+}
+
+.txt p{
+    margin: 0;
+}
+
+.txt-esq{
+    text-align: right;
+    border-right: 2px solid rgba(255, 107, 0, 0.4);
+    padding-right: 5px;
+}
+
+.txt-dir{
+    text-align: left;
+    border-left: 2px solid rgba(255, 107, 0, 0.4);
+    padding-left: 5px  ;
+}
+
+
+.ft {
+    position: relative;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    width: 80%;
+    text-align: center;
+}
+
+.ft:hover .popup {
+    display: block;
+}
+
+.tema1, .tema2, .tema3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre a imagem e o texto */
+}
+
+.tema1 h2, .tema2 h2, .tema3 h2 {
+    font-size: 1.3em;
+    color: #ff6b00;
+    margin: 0 0 5px 0;
+    padding: 0;
+    background: none;
+}
+
+.tema1 img, .tema2 img, .tema3 img {
+    background-color: #111;   /* Fundo cinza escuro apenas na moldura da imagem */
+    padding: 15px;            /* Cria o espaçamento da moldura */
+    border-radius: 25px;      /* Borda arredondada que você pediu */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+    width: 225px;             /* Largura do quadrado */
+    height: 225px;            /* Altura do quadrado */
+    object-fit: cover;        /* Impede que a foto fique esticada */
+}
+
+footer {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+
+footer img{
+    width: 75px;
+    height: 75px;
+    border-radius: 35%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);;
+}
+
+.ft-esq{
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.ft-dir{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.ft-esq img, .ft-dir img {
+    width: 125px;
+    height: 125px;
+    border-radius: 65%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Background image */
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2; /* Joga para trás do conteúdo */
+
+    background-image: url('img/ft-esq.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5); /* Escurece a imagem de fundo */
+
+    transition: background-image 0.8s ease-in-out; 
+    opacity: 0.32; /* Deixa a imagem de fundo mais transparente */
+}
